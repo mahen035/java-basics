@@ -11,7 +11,7 @@ public class Customer {
 		byte b = 112;
 		short s = 115;
 		//s = b;
-		b=(byte)s;
+		
 		System.out.println("Customer class");
 		System.out.println("Customer Name: "+customerName);
 	}
