@@ -9,7 +9,7 @@ public class Customer {
 		//next() -> will take single string without space
 		//nextInt() -> to input integer values
 		byte b = 112;
-		short s = 115;
+		short s = 116;
 		//s = b;
 		
 		System.out.println("Customer class");
