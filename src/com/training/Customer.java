@@ -12,7 +12,7 @@ public class Customer {
 		short s = 116;
 		//s = b;
 		
-		System.out.println("Customer class");
+		System.out.println("Customer class update");
 		System.out.println("Customer Name: "+customerName);
 	}
 }
