@@ -66,6 +66,4 @@ public class Demo {
 	// conditions
 	// loops
 
-
-//Object Oriented:
-	//
+// Exception handling

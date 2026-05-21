@@ -1,6 +1,5 @@
 package com.training;
 
-
 //Encapsulation
 public class User{
 	
