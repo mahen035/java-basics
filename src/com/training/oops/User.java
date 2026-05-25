@@ -10,16 +10,18 @@ public class User{// implements Comparable<User>{
 	protected String userId;
 	protected String userName;
 	protected String userEmail;
+	protected int age;
 	
 	public User() {
 		System.out.println("User constructor called");
 	}
 	
 	//Constructor
-	public User(String userId, String userName, String userEmail) {
+	public User(String userId, String userName, String userEmail, int age) {
 		this.userId = userId;
 		this.userName = userName;
 		this.userEmail = userEmail;
+		this.age = age;
 	}
 	
 	//static variables
@@ -44,7 +46,7 @@ public class User{// implements Comparable<User>{
 	}
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", userName=" + userName + ", userEmail=" + userEmail + "]";
+		return "User [userId=" + userId + ", userName=" + userName + ", userEmail=" + userEmail + ", Age="+ age+"]";
 	}
 
 	@Override
@@ -64,6 +66,14 @@ public class User{// implements Comparable<User>{
 		User other = (User) obj;
 		return Objects.equals(userEmail, other.userEmail) && Objects.equals(userId, other.userId)
 				&& Objects.equals(userName, other.userName);
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 //	@Override

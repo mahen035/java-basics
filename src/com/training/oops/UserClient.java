@@ -7,7 +7,7 @@ public class UserClient {
 	public static void main(String[] args) {
 		//String name = "Ali";
 		
-		Admin admin = new Admin("Adm101","Anwar","bct@mail.com",true);
+		Admin admin = new Admin("Adm101","Anwar","bct@mail.com",23,true);
 		System.out.println(admin);
 //		Scanner sc = new Scanner(System.in);
 //		System.out.println("How many user object you want:");
@@ -32,7 +32,7 @@ public class UserClient {
 //		
 		
 		
-		User user1 = new User("A101","Haitham","abc@mail.com"); 
+		User user1 = new User("A101","Haitham","abc@mail.com",21); 
 //		user1.setUserId("A101");
 //		user1.setUserName("Haitham");
 //		user1.setUserEmail("abc@mail.com");

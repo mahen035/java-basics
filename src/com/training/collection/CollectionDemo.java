@@ -24,11 +24,11 @@ public class CollectionDemo {
 		
 		Set<User> userSet = new TreeSet<>(new NameComparator());
 		//List<User> userList = new ArrayList<>();
-		User user1 = new User("A101","Gaith", "abc@mail.com");
-		User user2 = new User("A102","Anwar", "sdf@mail.com");
-		User user4 = new User("A104","Rohan", "rho@mail.com");
-		User user3 = new User("A103","Ayuub", "gjf@mail.com");
-		User user5 = new User("A102","Anwar", "sdf@mail.com");
+		User user1 = new User("A101","Gaith", "abc@mail.com",21);
+		User user2 = new User("A102","Anwar", "sdf@mail.com",23);
+		User user4 = new User("A104","Rohan", "rho@mail.com",24);
+		User user3 = new User("A103","Ayuub", "gjf@mail.com",22);
+		User user5 = new User("A102","Anwar", "sdf@mail.com",23);
 		userSet.add(user1);
 		userSet.add(user2);
 		userSet.add(user4);
