@@ -1,9 +1,9 @@
-package com.training;
+package com.training.oops;
 
 import java.util.Objects;
 
 //Encapsulation
-public class User implements Comparable<User>{
+public class User{// implements Comparable<User>{
 	
 	// 1. attributes
 	// instance variables
@@ -66,10 +66,10 @@ public class User implements Comparable<User>{
 				&& Objects.equals(userName, other.userName);
 	}
 
-	@Override
-	public int compareTo(User o) {
-		return this.userId.compareTo(o.userId);
-	}
+//	@Override
+//	public int compareTo(User o) {
+//		return this.userId.compareTo(o.userId);
+//	}
 	
 	
 	

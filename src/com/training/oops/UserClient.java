@@ -1,4 +1,4 @@
-package com.training;
+package com.training.oops;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.training;
+package com.training.exception;
 
 public class InsufficientBalanceException extends RuntimeException {
 	

@@ -1,4 +1,4 @@
-package com.training;
+package com.training.corejava;
 import java.util.Scanner;
 public class Demo {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.training;
+package com.training.oops;
 
 public class CurrentAccount extends Account{
 	

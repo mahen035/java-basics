@@ -1,4 +1,5 @@
-package com.training;
+package com.training.oops;
+
 public class BankClient {
 	public static void main(String[] args) {
 		SavingAccount savingAccount = new SavingAccount(1234, 

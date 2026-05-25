@@ -1,4 +1,6 @@
-package com.training;
+package com.training.oops;
+
+import com.training.exception.InsufficientBalanceException;
 
 public class SavingAccount extends Account{
 	
