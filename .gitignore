@@ -1,0 +1,37 @@
+# Eclipse project files
+.settings/
+.classpath
+.project
+
+# Build directories
+bin/
+build/
+target/
+
+# IntelliJ
+.idea/
+
+# VS Code
+.vscode/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Java
+*.class
+
+# Maven
+target/
+
+# Tomcat / servlet container
+logs/
+work/
+temp/
+
+# Archives
+*.war
+*.ear
+
+# Logs
+*.log
