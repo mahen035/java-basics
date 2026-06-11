@@ -3,6 +3,8 @@ package com.training.customersvc.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,31 +32,36 @@ public class CustomerController {
 	}
 	
 	@GetMapping("customer")
-	public List<Customer> getAllCustomers() {
-		return customerService.getAllCustomers();
+	public ResponseEntity<List<Customer>> getAllCustomers() {
+		//return customerService.getAllCustomers();
+		return ResponseEntity.ok(customerService.getAllCustomers());
 		
 	}
 	
 	@PostMapping("customer")
-	public String addCustomer(@RequestBody Customer customer) {
+	public ResponseEntity<String> addCustomer(@RequestBody Customer customer) {
 		customerService.addCustomer(customer);
-		return "Customer added successfully";
+		//return "Customer added successfully";
+		return new ResponseEntity<>("Customer added successfully",HttpStatus.CREATED);
 	}
 	
 	@GetMapping("customer/{id}")
-	public Customer findById(@PathVariable("id") long customerId) {
-		return customerService.getCustomerById(customerId);
+	public ResponseEntity<Customer> findById(@PathVariable("id") long customerId) {
+		//return customerService.getCustomerById(customerId);
+		return new ResponseEntity<>(customerService.getCustomerById(customerId),HttpStatus.FOUND);
 	}
 	
 	@DeleteMapping("customer")
-	public String deleteById(@RequestParam long cutomerId) {
+	public ResponseEntity<String> deleteById(@RequestParam long cutomerId) {
 		customerService.deleteCustomerById(cutomerId);
-		return "Customer Deleted Successfully!";
+		//return "Customer Deleted Successfully!";
+		return new ResponseEntity<>("Customer Deleted Successfully!",HttpStatus.OK);
 	}
 	
 	@PutMapping("customer/{id}")
-	public Customer updateCustomer(@RequestBody Customer customer, @PathVariable("id") long customerId) {
-		return customerService.updateCustomer(customer, customerId);
+	public ResponseEntity<Customer> updateCustomer(@RequestBody Customer customer, @PathVariable("id") long customerId) {
+		//return customerService.updateCustomer(customer, customerId);
+		return new ResponseEntity<>(customerService.updateCustomer(customer, customerId),HttpStatus.OK);
 	}
 	
 }
