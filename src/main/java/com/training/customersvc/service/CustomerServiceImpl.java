@@ -1,10 +1,14 @@
 package com.training.customersvc.service;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.training.customersvc.dto.RegisterRequest;
+import com.training.customersvc.dto.RegisterResponse;
 import com.training.customersvc.entity.Customer;
 import com.training.customersvc.repository.CustomerRepository;
 
@@ -13,6 +17,9 @@ public class CustomerServiceImpl implements CustomerService {
 	
 	@Autowired
 	private CustomerRepository customerRepository;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	@Override
 	public List<Customer> getAllCustomers() {
@@ -20,7 +27,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public Customer getCustomerById(long customerId) {
+	public Customer getCustomerById(UUID customerId) {
 		Optional<Customer> obj = customerRepository.findById(customerId);
 		if (obj.isPresent())	{
 			return obj.get();
@@ -37,14 +44,14 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public void deleteCustomerById(long customerId) {
+	public void deleteCustomerById(UUID customerId) {
 		
 		customerRepository.deleteById(customerId);
 		
 	}
 
 	@Override
-	public Customer updateCustomer(Customer customer, long customerId) {
+	public Customer updateCustomer(Customer customer, UUID customerId) {
 		//1. find the customer
 		Optional<Customer> obj = customerRepository.findById(customerId);
 		Customer oldCustomer = obj.get();
@@ -55,6 +62,20 @@ public class CustomerServiceImpl implements CustomerService {
 		customerRepository.save(oldCustomer);
 		return oldCustomer;
 		
+	}
+
+	@Override
+	public RegisterResponse registerCustomer(RegisterRequest request) {
+				
+		Customer newCustomer = customerRepository.save(
+					new Customer(request.getCustomerName(), 
+								 request.getCustomerEmail(),
+								 passwordEncoder.encode(request.getPassword())));
+		//passwordEncoder.matches(null, null)
+		
+		RegisterResponse response = new RegisterResponse(newCustomer.getCustomerId(), 
+				                                        "Registration Successful!");
+		return response;
 	}
 
 }

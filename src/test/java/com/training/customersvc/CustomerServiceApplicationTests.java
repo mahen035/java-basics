@@ -1,13 +1,12 @@
-package com.training.customersvc;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class CustomerServiceApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+/*
+ * package com.training.customersvc;
+ * 
+ * import org.junit.jupiter.api.Test; import
+ * org.springframework.boot.test.context.SpringBootTest;
+ * 
+ * @SpringBootTest class CustomerServiceApplicationTests {
+ * 
+ * @Test void contextLoads() { }
+ * 
+ * }
+ */

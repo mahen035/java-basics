@@ -1,42 +1,20 @@
-package com.training.customersvc.entity;
+package com.training.customersvc.dto;
 
-import java.util.UUID;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
-public class Customer {
+public class RegisterRequest {
 	
-	@Id
-	@GeneratedValue
-	private UUID customerId;
-	
-	@Column(nullable=false)
 	private String customerName;
 	private String customerEmail;
 	private String password;
 	
-	public Customer() {
+	public RegisterRequest() {
 		super();
 	}
-	
-	public Customer(String customerName, String customerEmail, String password) {
+
+	public RegisterRequest(String customerName, String customerEmail, String password) {
 		super();
 		this.customerName = customerName;
 		this.customerEmail = customerEmail;
 		this.password = password;
-	}
-
-	public UUID getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(UUID customerId) {
-		this.customerId = customerId;
 	}
 
 	public String getCustomerName() {
