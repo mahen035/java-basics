@@ -25,6 +25,7 @@
             <li><a href="<%=request.getContextPath()%>/about">About Us</a></li>
             <li><a href="<%=request.getContextPath()%>/contact">Contact</a></li>
             <li><a href="<%=request.getContextPath()%>/open-account">Open an Account</a></li>
+            <li><a href="<%=request.getContextPath()%>/register.jsp">Register</a></li>
             <li><a href="<%=request.getContextPath()%>/services">Services</a></li>
             <li><a href="<%=request.getContextPath()%>/loans">Loans</a></li>
             <li><a href="<%=request.getContextPath()%>/branches">Branches</a></li>
